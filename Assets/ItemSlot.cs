@@ -1,0 +1,32 @@
+using JetBrains.Annotations;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ItemSlot : MonoBehaviour
+{
+    //===ITEM DATA===//
+    public string itemName;
+    public int quantity;
+    public Sprite itemSprite;
+    public bool isFull;
+
+    //===ITEM SLOT===//
+    [SerializeField] private Image ItemImage;
+
+
+    public void AddItem(string itemName, int quantity, Sprite itemSprite)
+    {
+        ItemImage.enabled = true;
+        this.itemName = itemName;
+        this.quantity = quantity;
+        this.itemSprite = itemSprite;
+        isFull = true;
+        
+        
+        ItemImage.sprite = itemSprite;
+        
+    }
+
+}
