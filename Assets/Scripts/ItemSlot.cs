@@ -13,19 +13,19 @@ public class ItemSlot : MonoBehaviour
     public bool isFull;
 
     //===ITEM SLOT===//
-    [SerializeField] private Image ItemImage;
+    [SerializeField] private Image itemImage;
 
 
     public void AddItem(string itemName, int quantity, Sprite itemSprite)
     {
-        ItemImage.enabled = true;
+        
         this.itemName = itemName;
         this.quantity = quantity;
         this.itemSprite = itemSprite;
         isFull = true;
         
         
-        ItemImage.sprite = itemSprite;
+        itemImage.sprite = itemSprite;
         
     }
 
