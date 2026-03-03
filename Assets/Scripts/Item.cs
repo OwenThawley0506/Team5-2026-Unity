@@ -5,20 +5,20 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField]
-    private string itemName;
+    public string itemName;
 
     [SerializeField]
-    private Sprite sprite;
+    public Sprite sprite;
 
     [SerializeField]
-    private int quantity;
+    public int quantity;
 
     [TextArea]
     [SerializeField]
-    private string itemDescription;
+    public string itemDescription;
 
 
-    private InventoryManager inventoryManager;
+    public InventoryManager inventoryManager;
 
 
     // Start is called before the first frame update

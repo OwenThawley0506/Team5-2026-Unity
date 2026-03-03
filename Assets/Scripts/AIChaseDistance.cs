@@ -9,10 +9,14 @@ public class AIChaseDistance : MonoBehaviour
     public float distanceBetween;
 
     private float distance;
+
+    private Vector2 startpos;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        startpos = transform.position;
     }
 
     // Update is called once per frame
@@ -25,5 +29,13 @@ public class AIChaseDistance : MonoBehaviour
         
         if(distance < distanceBetween)
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            transform.position = startpos;
+        }
     }
 }
