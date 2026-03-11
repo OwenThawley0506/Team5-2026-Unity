@@ -15,22 +15,19 @@ public class TalkingCharacter : MonoBehaviour
     private void Awake()
     {
         playerInRange = false;
-        visualCue.SetActive(false);
+        // this is here to set as a start, when codeing later, have this start as false and only set when needs be
+        visualCue.SetActive(true); 
     }
 
     private void Update()
     {
         if (playerInRange && !DialogueManager.getInstance().dialogueIsPlaying)
         {
-            visualCue.SetActive(true);
             if(Input.GetKeyDown(KeyCode.F))
             {
+                visualCue.SetActive(false);
                 DialogueManager.getInstance().EnterDialogueMode(inkJSON);
             }
-        }
-        else
-        {
-            visualCue.SetActive(false);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
