@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         //handle continueing to the next line in the dialogue when submit is pressed
-        if (Input.GetKeyDown(KeyCode.F))
+        if (InputManager.getInstance().submitPressed)
         {
             ContinueStory();
         }
@@ -96,9 +96,9 @@ public class DialogueManager : MonoBehaviour
             //split the tag into its name and value (if it has a value)
             string[] splitTag = tag.Split(":");
             if (splitTag.Length != 2)
-            }
-            Debug.LogError("Tag could not be appropriatly split: " + tag);
             {
+                Debug.LogError("Tag could not be appropriatly split: " + tag);
+            }
 
         string tagKey = splitTag[0].Trim();
         string tagValue = splitTag[1].Trim();

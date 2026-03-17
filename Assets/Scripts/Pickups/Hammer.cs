@@ -16,7 +16,7 @@ public class Hammer : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         player = collision.gameObject.GetComponent<Player>();
-        if(collision.gameObject.name == "Player" && Input.GetKeyDown(KeyCode.F))
+        if(collision.gameObject.name == "Player" && InputManager.getInstance().interactPressed)
         {
             if (player.hasCanister == false && player.hasHammer == false)
             {

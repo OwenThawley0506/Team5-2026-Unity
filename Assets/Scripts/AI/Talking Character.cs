@@ -23,7 +23,7 @@ public class TalkingCharacter : MonoBehaviour
     {
         if (playerInRange && !DialogueManager.getInstance().dialogueIsPlaying)
         {
-            if(Input.GetKeyDown(KeyCode.F))
+            if(InputManager.getInstance().interactPressed)
             {
                 visualCue.SetActive(false);
                 DialogueManager.getInstance().EnterDialogueMode(inkJSON);

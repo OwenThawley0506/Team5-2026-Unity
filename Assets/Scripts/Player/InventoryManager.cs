@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;  
 
 public class InventoryManager : MonoBehaviour
 {
@@ -17,14 +18,14 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Inventory") && MenuActive)
+        if(InputManager.getInstance().submitPressed && MenuActive)
         {
             Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             MenuActive = false;
         }
 
-        else if (Input.GetButtonDown("Inventory") && !MenuActive)
+        else if (InputManager.getInstance().submitPressed && !MenuActive)
         {
             Time.timeScale = 0;
             InventoryMenu.SetActive(true);
