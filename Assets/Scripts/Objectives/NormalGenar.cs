@@ -19,7 +19,7 @@ public class NormalGen : MonoBehaviour
     {
         player = GameObject.Find("Player").GetComponent<Player>();
         //set player.hasHammer to Player inventory is full/Empty
-        if (player.hasHammer == true && player.hasCanister == false && isPlayerInRange && InputManager.getInstance().interactPressed && isnormalGenOn == false)
+        if (player.hasHammer == true && player.hasCanister == false && isPlayerInRange && InputManager.getInstance().GetInteractPressed() && isnormalGenOn == false)
         {
             {
                 //Start repairing the generator and update progress bar
@@ -42,11 +42,11 @@ public class NormalGen : MonoBehaviour
                 }
             }
         }        
-        if (player.hasHammer == false && isPlayerInRange && InputManager.getInstance().interactPressed && isnormalGenOn == false)
+        if (player.hasHammer == false && isPlayerInRange && InputManager.getInstance().GetInteractPressed() && isnormalGenOn == false)
         {
             Debug.Log("Player does not have the right item to repair the normal generator.");
         }
-        if (isnormalGenOn == true && isPlayerInRange && InputManager.getInstance().interactPressed)
+        if (isnormalGenOn == true && isPlayerInRange && InputManager.getInstance().GetInteractPressed())
         {
             Debug.Log("Normal Generator is already on, no need to repair.");
         }

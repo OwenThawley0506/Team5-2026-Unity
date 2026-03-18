@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private float PlayerSpeed = 5f;
     private Rigidbody2D rb;
-    private Vector2 movementDirection;
 
     public bool hasCanister;
     public bool hasHammer;
@@ -37,6 +36,6 @@ public class Player : MonoBehaviour
             rb.velocity = Vector2.zero;
             return;
         }
-        rb.velocity = movementDirection * PlayerSpeed;
+        rb.velocity = InputManager.getInstance().moveDirection * PlayerSpeed;
     }
 }

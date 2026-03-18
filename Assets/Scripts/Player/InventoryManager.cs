@@ -18,14 +18,14 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(InputManager.getInstance().submitPressed && MenuActive)
+        if(InputManager.getInstance().GetInteractPressed() && MenuActive)
         {
             Time.timeScale = 1;
             InventoryMenu.SetActive(false);
             MenuActive = false;
         }
 
-        else if (InputManager.getInstance().submitPressed && !MenuActive)
+        else if (InputManager.getInstance().GetInteractPressed() && !MenuActive)
         {
             Time.timeScale = 0;
             InventoryMenu.SetActive(true);

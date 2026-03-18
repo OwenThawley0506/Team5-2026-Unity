@@ -50,8 +50,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         //handle continueing to the next line in the dialogue when submit is pressed
-        if (InputManager.getInstance().submitPressed)
+        if (InputManager.getInstance().GetSubmitPressed())
         {
+            Debug.Log("Submit Pressed, continuing story");
             ContinueStory();
         }
     }

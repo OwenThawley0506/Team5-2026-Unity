@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TalkingCharacter : MonoBehaviour
 {
-    [Header("Visua Cue")]
+    [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
 
     [Header("Ink JSON")]
@@ -23,7 +23,7 @@ public class TalkingCharacter : MonoBehaviour
     {
         if (playerInRange && !DialogueManager.getInstance().dialogueIsPlaying)
         {
-            if(InputManager.getInstance().interactPressed)
+            if(InputManager.getInstance().GetInteractPressed())
             {
                 visualCue.SetActive(false);
                 DialogueManager.getInstance().EnterDialogueMode(inkJSON);

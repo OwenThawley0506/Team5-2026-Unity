@@ -20,7 +20,7 @@ public class UVGen : MonoBehaviour
     {
         player = GameObject.Find("Player").GetComponent<Player>();
         //set player.hasCanister to Player inventory is full/Empty
-        if (player.hasCanister == true && player.hasHammer == false && isPlayerInRange && InputManager.getInstance().interactPressed && isUVGenOn == false)
+        if (player.hasCanister == true && player.hasHammer == false && isPlayerInRange && InputManager.getInstance().GetInteractPressed() && isUVGenOn == false)
         {
                 //Start repairing the generator and update progress bar
                 //loat)GensProgress / howDifficultToFixGen;
@@ -40,11 +40,11 @@ public class UVGen : MonoBehaviour
                     //progressBar.enabled = false;
                 }
         }
-        if (player.hasCanister == false && isPlayerInRange && InputManager.getInstance().interactPressed && isUVGenOn == false)
+        if (player.hasCanister == false && isPlayerInRange && InputManager.getInstance().GetInteractPressed() && isUVGenOn == false)
         {
             Debug.Log("Player does not have the right item to repair the UV generator.");
         }
-        if (isUVGenOn == true && isPlayerInRange && InputManager.getInstance().interactPressed)
+        if (isUVGenOn == true && isPlayerInRange && InputManager.getInstance().GetInteractPressed())
         {
             Debug.Log("UV Generator is already on, no need to repair.");
         }

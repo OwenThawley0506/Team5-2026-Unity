@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
 public class InputManager : MonoBehaviour
 {
-    private Vector2 moveDirection;
+    public Vector2 moveDirection;
     public bool jumpPressed = false;
     public bool interactPressed = false;
     public bool submitPressed = false;
@@ -62,7 +63,7 @@ public class InputManager : MonoBehaviour
             interactPressed = false;
         }
     }
-    public void submitButtonPressed(InputAction.CallbackContext context)
+    public void SubmitPressed(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
@@ -73,4 +74,36 @@ public class InputManager : MonoBehaviour
             submitPressed = false;
         }
     }
+      public Vector2 GetMoveDirection() 
+    {
+        return moveDirection;
+    }
+
+    public bool GetJumpPressed() 
+    {
+        bool result = jumpPressed;
+        jumpPressed = false;
+        return result;
+    }
+
+    public bool GetInteractPressed() 
+    {
+        bool result = interactPressed;
+        interactPressed = false;
+        return result;
+    }
+
+    public bool GetSubmitPressed() 
+    {
+        bool result = submitPressed;
+        submitPressed = false;
+        return result;
+    }
+
+    public void RegisterSubmitPressed() 
+    {
+        submitPressed = false;
+    }
+
+
 }

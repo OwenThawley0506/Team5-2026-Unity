@@ -14,7 +14,7 @@ public class GasCanistor : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {        
         player = collision.gameObject.GetComponent<Player>();
-        if(collision.gameObject.name == "Player" && InputManager.getInstance().interactPressed)
+        if(collision.gameObject.name == "Player" && InputManager.getInstance().GetInteractPressed())
         {
             if (player.hasCanister == false && player.hasHammer == false)
             {
