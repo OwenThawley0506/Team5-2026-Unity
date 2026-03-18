@@ -34,21 +34,21 @@
                 },
                 {
                     "name": "Interact",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "a3fa36e5-5ba8-4cb3-8e4e-b049b610ba78",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Submit",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "0cb3682f-6951-49ba-b672-0f3806267948",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
