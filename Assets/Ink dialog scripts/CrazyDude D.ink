@@ -1,12 +1,12 @@
 -> first
 
 === first ===
-crazy dude: Hey their buddy boy
+Hey their buddy boy #Speaker:CrazyDude #Portrait:normal #Layout:Right
 
-MC: Hey they crazy dude, how are you
+Hey they crazy dude, how are you #Speaker:MainCharacter #Portrait:Normal #Layout:Left
 
-crazy dude: I'm feeling romantical
+I'm feeling romantical #Speaker:CrazyDude #Portrait:normal #Layout:Right
 
-MC: Oh no...
+Oh no... #Speaker:MainCharacter #Portrait:Normal #Layout:Left
 
 -> END

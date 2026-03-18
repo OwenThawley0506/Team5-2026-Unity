@@ -5,6 +5,8 @@ using Ink.Runtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SearchService;
+using UnityEngine.EventSystems;
+using UnityEditor.Experimental.GraphView;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -12,6 +14,9 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] private TextMeshProUGUI displayNameText;
+    [SerializeField] private GameObject portraitAnimator;
+    private Animator layoutAnimator;
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
 
@@ -39,6 +44,8 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
+
+        layoutAnimator = dialoguePanel.GetComponent<Animator>();        
     }
 
     private void Update()
@@ -52,7 +59,6 @@ public class DialogueManager : MonoBehaviour
         //handle continueing to the next line in the dialogue when submit is pressed
         if (InputManager.getInstance().GetSubmitPressed())
         {
-            Debug.Log("Submit Pressed, continuing story");
             ContinueStory();
         }
     }
@@ -64,6 +70,11 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
         ContinueStory();
+
+        //resets portrait, layout, and speaker
+        displayNameText.text = "";
+        portraitAnimator.GetComponent<Animator>().Play("default");
+        layoutAnimator.Play("left");
     }
 
     //finishes current dialogue and exits dialogue mode
@@ -109,15 +120,15 @@ public class DialogueManager : MonoBehaviour
             {
                 //handle speaker tag
                 case Speaker_Tag:
-                    Debug.Log("speaker tag value: " + tagValue);
+                    displayNameText.text = tagValue;
                     break;
                     //handle portrait tag
                 case Portrait_Tag:
-                    Debug.Log("portrait tag value: " + tagValue);
+                    portraitAnimator.GetComponent<Animator>().Play(tagValue);
                     break;
                     //handle layout tag
                 case Layout_Tag:
-                    Debug.Log("layout tag value: " + tagValue);
+                    layoutAnimator.Play(tagValue);
                     break;
                 default:
                     Debug.LogWarning("Tag came in but is currently not beinghandled: " + tag);

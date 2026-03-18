@@ -40,18 +40,6 @@ public class InputManager : MonoBehaviour
         }
     }
 
-    /*public void JumpPressed(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            jumpPressed = true;
-        }
-        else if (context.canceled)
-        {
-            jumpPressed = false;
-        }
-    }*/
-
     public void InteractButtonPressed(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -77,13 +65,6 @@ public class InputManager : MonoBehaviour
       public Vector2 GetMoveDirection() 
     {
         return moveDirection;
-    }
-
-    public bool GetJumpPressed() 
-    {
-        bool result = jumpPressed;
-        jumpPressed = false;
-        return result;
     }
 
     public bool GetInteractPressed() 
