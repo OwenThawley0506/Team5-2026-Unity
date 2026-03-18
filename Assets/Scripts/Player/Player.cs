@@ -33,9 +33,9 @@ public class Player : MonoBehaviour
     {
         if (DialogueManager.getInstance().dialogueIsPlaying)
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             return;
         }
-        rb.velocity = InputManager.getInstance().moveDirection * PlayerSpeed;
+        rb.linearVelocity = InputManager.getInstance().moveDirection * PlayerSpeed;
     }
 }

@@ -24,7 +24,7 @@ public class simpleMovement : MonoBehaviour
 
         moveInput.Normalize();
 
-        rb.velocity = moveInput * speed;
+        rb.linearVelocity = moveInput * speed;
 
 
     }
