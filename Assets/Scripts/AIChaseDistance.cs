@@ -38,4 +38,10 @@ public class AIChaseDistance : MonoBehaviour
             transform.position = startpos;
         }
     }
+
+    //void OnDrawGizmos()
+    //{
+    //    Gizmos.color = new Color(0.75f, 0.0f, 0.0f, 0.75f);
+    //    Gizmos.DrawWireSphere(transform.position, distanceBetween);
+    //}
 }
