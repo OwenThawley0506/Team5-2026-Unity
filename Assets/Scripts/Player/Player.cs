@@ -31,11 +31,15 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+<<<<<<< HEAD:Assets/Scripts/Player/Player.cs
         if (DialogueManager.getInstance().dialogueIsPlaying)
         {
             rb.velocity = Vector2.zero;
             return;
         }
         rb.velocity = InputManager.getInstance().moveDirection * PlayerSpeed;
+=======
+        rb.linearVelocity = movementDirection * PlayerSpeed;
+>>>>>>> Art:Assets/Scripts/Player.cs
     }
 }
