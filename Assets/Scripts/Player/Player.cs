@@ -1,3 +1,4 @@
+﻿using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,8 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (DialogueManager.getInstance() != true) { Debug.Log("No Dialogue Manager Found");  return; }
+
         if (DialogueManager.getInstance().dialogueIsPlaying)
         {
             rb.linearVelocity = Vector2.zero;
