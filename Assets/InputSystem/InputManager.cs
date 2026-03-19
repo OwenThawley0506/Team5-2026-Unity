@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// for any additional inputs needed to add, bassicly just copy and paste. simple as
 [RequireComponent(typeof(PlayerInput))]
 public class InputManager : MonoBehaviour
 {
