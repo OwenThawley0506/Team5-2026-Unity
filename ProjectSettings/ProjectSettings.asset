@@ -909,11 +909,15 @@ PlayerSettings:
   qnxGraphicConfPath: 
   apiCompatibilityLevel: 6
 <<<<<<< HEAD
+<<<<<<< HEAD
   activeInputHandler: 2
 =======
   captureStartupLogs: {}
   activeInputHandler: 0
 >>>>>>> Art
+=======
+  activeInputHandler: 0
+>>>>>>> parent of 2fd057b (Merge branch 'CharacterInteraction2.0')
   windowsGamepadBackendHint: 0
   cloudProjectId: 201b798e-25e8-4420-bdea-7841de1b1313
   framebufferDepthMemorylessMode: 0
