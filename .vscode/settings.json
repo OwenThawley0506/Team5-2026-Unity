@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Team5-2026-Unity.sln"
+    "dotnet.defaultSolution": "Team5-2026-Unity.slnx"
 }

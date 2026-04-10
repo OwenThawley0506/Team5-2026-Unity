@@ -1,0 +1,9 @@
+﻿<Solution>
+  <Project Path="Ink-Libraries.csproj" />
+  <Project Path="InkEditor.csproj" />
+  <Project Path="FolderIconsEditor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="DOTween.Modules.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="Febucci.HierarchyIcons.csproj" />
+</Solution>
