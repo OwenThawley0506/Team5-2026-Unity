@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SC_Factory V1.unity
     guid: a8dbe85c5b134e64c9f3880c89483a10
   - enabled: 1
+    path: Assets/Scenes/SC_Town.unity
+    guid: e29a66867325a924c8da77355eb8a822
+  - enabled: 0
     path: Assets/Scenes/DialogSystem.unity
     guid: 0ce9d678c42dc4043b0d3a9d5c3c1c80
   m_configObjects: {}

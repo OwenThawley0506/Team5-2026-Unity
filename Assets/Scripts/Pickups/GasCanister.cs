@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GasCanistor : MonoBehaviour
+public class GasCanister : MonoBehaviour
 {
     Player player;
-    GasCanistor gasCanistor;
-    public GasCanistor()
+    GasCanister gasCanister;
+    public GasCanister()
     {
 
         return;

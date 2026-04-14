@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public bool hasCanister;
     public bool hasHammer;
+    
 
     public Player()
     {
